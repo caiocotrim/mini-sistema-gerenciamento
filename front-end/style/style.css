@@ -1,4 +1,4 @@
-#login {
+#login, #gerenciamento, #visualizar {
     text-align: center;
     flex-direction: row;
 }
