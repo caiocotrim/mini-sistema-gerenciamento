@@ -1,4 +1,7 @@
-#login, #gerenciamento, #visualizar {
+#login, #gerenciamento, #visualizar, #adicionar-usuario {
     text-align: center;
     flex-direction: row;
+}
+a {
+    text-align: center;
 }
