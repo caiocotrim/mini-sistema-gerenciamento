@@ -24,8 +24,10 @@ def criar_usuario(novo_usuario: Usuario):
     for usuario in usuarios:
         if novo_usuario.id == usuario.id:
             return {"erro": f"Já existe usuário com ID {novo_usuario.id}."}
+        if novo_usuario.nome == usuario.nome:
+            return {"erro": f"Já existe usuário com nome {novo_usuario.nome}."}
         elif novo_usuario.email == usuario.email:
-            return {"erro": f"Já existe usuário com Email {novo_usuario.email}"}
+            return {"erro": f"Já existe usuário com email {novo_usuario.email}"}
 
     usuarios.append(novo_usuario)
     return {"mensagem": f"Usuário {novo_usuario.id} adicionado com sucesso."}
@@ -38,7 +40,7 @@ def resgatar_usuario(id: int):
     return {"erro": f"Usuário de ID {id} não encontrado."}
         
 @app.get("/resgatar-todos-usuarios")
-def resgatar_todos_usuario():
+def resgatar_todos_usuarios():
     return usuarios
 
 @app.put("/editar-usuario/{id}")

@@ -1,4 +1,4 @@
-#login, #gerenciamento, #visualizar, #adicionar-usuario {
+#login, #gerenciamento, #visualizar, #adicionar-usuario, #editar-usuario, #remover-usuario, #retorno-api {
     text-align: center;
     flex-direction: row;
 }
